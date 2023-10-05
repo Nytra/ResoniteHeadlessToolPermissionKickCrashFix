@@ -1,36 +1,43 @@
 ﻿using FrooxEngine;
 using HarmonyLib;
-using NeosModLoader;
-using System.Reflection;
+using ResoniteModLoader;
 using System;
 
 namespace HeadlessToolTipKickCrashFix
 {
-    public class HeadlessToolTipKickCrashFix : NeosMod
+    public class HeadlessToolTipKickCrashFix : ResoniteMod
     {
         public override string Name => "HeadlessToolTipKickCrashFix";
-        public override string Author => "Nytra";
-        public override string Version => "1.0.1";
-        public override string Link => "https://github.com/Nytra/NeosHeadlessToolTipKickCrashFix";
+        public override string Author => "Nytra / Rucio / Stiefeljackal";
+        public override string Version => "1.0.0";
+        public override string Link => "https://github.com/Nytra/ResoniteHeadlessToolPermissionKickCrashFix";
         public override void OnEngineInit()
         {
-            Harmony harmony = new Harmony($"owo.{Author}.{Name}");
-
-            // Check if we are loaded by a headless client
-            // (Thanks to HeadlessTweaks for this next line)
-            Type neosHeadless = AccessTools.TypeByName("NeosHeadless.Program");
-            if (neosHeadless != null)
+            try
             {
-                MethodInfo originalMethod = AccessTools.DeclaredMethod(typeof(CommonTool), "TooltipDequipped", new Type[] { typeof(IToolTip), typeof(bool) });
-                MethodInfo replacementMethod = AccessTools.DeclaredMethod(typeof(HeadlessToolTipKickCrashFix), nameof(CommonTool_TooltipDequipped_Prefix));
-                harmony.Patch(originalMethod, prefix: new HarmonyMethod(replacementMethod));
+                Harmony harmony = new Harmony($"owo.{Author}.{Name}");
+                Type resoniteHeadless = AccessTools.TypeByName("FrooxEngine.Headless.Program");
+                if (resoniteHeadless != null)
+                {
+                    harmony.PatchAll();
+                }
+            }
+            catch (Exception ex)
+            {
+                Error(ex);
             }
         }
 
-        public static bool CommonTool_TooltipDequipped_Prefix(IToolTip tooltip, ref bool popOff)
+        [HarmonyPatch(typeof(InteractionHandler))]
+        public class InteractionHandlerPatch
         {
-            popOff = false;
-            return true;
+            [HarmonyPrefix]
+            [HarmonyPatch("ToolDequipped")]
+            public static bool CommonTool_ToolDequipped_Prefix(ITool tooltip, ref bool popOff)
+            {
+                popOff = false;
+                return true;
+            }
         }
     }
 }
