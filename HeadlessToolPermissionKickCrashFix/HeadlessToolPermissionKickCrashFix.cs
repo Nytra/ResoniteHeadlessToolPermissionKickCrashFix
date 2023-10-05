@@ -3,11 +3,11 @@ using HarmonyLib;
 using ResoniteModLoader;
 using System;
 
-namespace HeadlessToolTipKickCrashFix
+namespace HeadlessToolPermissionKickCrashFix
 {
-    public class HeadlessToolTipKickCrashFix : ResoniteMod
+    public class HeadlessToolPermissionKickCrashFix : ResoniteMod
     {
-        public override string Name => "HeadlessToolTipKickCrashFix";
+        public override string Name => "HeadlessToolPermissionKickCrashFix";
         public override string Author => "Nytra / Rucio / Stiefeljackal";
         public override string Version => "1.0.0";
         public override string Link => "https://github.com/Nytra/ResoniteHeadlessToolPermissionKickCrashFix";
