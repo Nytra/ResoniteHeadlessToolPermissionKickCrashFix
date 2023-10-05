@@ -8,6 +8,8 @@ It must be installed on the Resonite Headless Server which is hosting the sessio
 
 This is the specific issue it addresses (From Neos GitHub): https://github.com/Neos-Metaverse/NeosPublic/issues/1693
 
+Thanks to Rucio and Stiefeljackal for porting the mod to Resonite.
+
 ## Installation
 1. Install [ResoniteModLoader](https://github.com/resonite-modding-group/ResoniteModLoader/) for the Headless Server.
 1. Place [HeadlessToolPermissionKickCrashFix.dll](https://github.com/Nytra/ResoniteHeadlessToolPermissionKickCrashFix/releases/latest/download/HeadlessToolPermissionKickCrashFix.dll) into your `rml_mods` folder. This folder should be at `C:\Program Files (x86)\Steam\steamapps\common\Resonite\Headless\rml_mods` for a default install. You can create it if it's missing, or if you launch the game once with NeosModLoader installed it will create the folder for you.
