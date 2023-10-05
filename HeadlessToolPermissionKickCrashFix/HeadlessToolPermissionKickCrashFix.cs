@@ -8,7 +8,7 @@ namespace HeadlessToolPermissionKickCrashFix
     public class HeadlessToolPermissionKickCrashFix : ResoniteMod
     {
         public override string Name => "HeadlessToolPermissionKickCrashFix";
-        public override string Author => "Nytra / Rucio / Stiefeljackal";
+        public override string Author => "Nytra / Rucio";
         public override string Version => "1.0.0";
         public override string Link => "https://github.com/Nytra/ResoniteHeadlessToolPermissionKickCrashFix";
         public override void OnEngineInit()
