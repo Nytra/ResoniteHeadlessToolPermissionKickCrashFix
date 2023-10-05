@@ -4,7 +4,7 @@ A [ResoniteModLoader](https://github.com/resonite-modding-group/ResoniteModLoade
 
 This mod fixes the non-builder grabbing builder crash bug.
 
-It must be installed on the Resonite Headless Server which is hosting the session for it to work.
+It must be installed on the Resonite Headless Server which is hosting the session for it to work. Does nothing if installed on a regular client.
 
 This is the specific issue it addresses (From Neos GitHub): https://github.com/Neos-Metaverse/NeosPublic/issues/1693
 
