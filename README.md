@@ -14,3 +14,7 @@ Thanks to Rucio for porting the mod to Resonite, and thanks to Stiefeljackal and
 1. Install [ResoniteModLoader](https://github.com/resonite-modding-group/ResoniteModLoader/) for the Headless Server.
 1. Place [HeadlessToolPermissionKickCrashFix.dll](https://github.com/Nytra/ResoniteHeadlessToolPermissionKickCrashFix/releases/latest/download/HeadlessToolPermissionKickCrashFix.dll) into your `rml_mods` folder. This folder should be at `C:\Program Files (x86)\Steam\steamapps\common\Resonite\Headless\rml_mods` for a default install. You can create it if it's missing, or if you launch the game once with NeosModLoader installed it will create the folder for you.
 1. Start the game. If you want to verify that the mod is working you can check your Resonite logs.
+
+## History
+
+Originally https://github.com/Nytra/NeosHeadlessToolTipKickCrashFix
