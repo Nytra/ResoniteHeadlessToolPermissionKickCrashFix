@@ -8,7 +8,7 @@ It must be installed on the Resonite Headless Server which is hosting the sessio
 
 This is the specific issue it addresses (From Neos GitHub): https://github.com/Neos-Metaverse/NeosPublic/issues/1693
 
-Thanks to Rucio and Stiefeljackal for porting the mod to Resonite.
+Thanks to Rucio for porting the mod to Resonite, and thanks to Stiefeljackal and TheSpecterLemon for testing it.
 
 ## Installation
 1. Install [ResoniteModLoader](https://github.com/resonite-modding-group/ResoniteModLoader/) for the Headless Server.
